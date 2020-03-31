@@ -58,4 +58,18 @@ libs.forEach(lib => require(`./libs/${lib}`)(app))
 
 Não adicionamos o array de libs no arquivo `main.js` para que possamos manter uma organização no código, e para que quando formos adicionar uma nova lib no projeto, não seja necessário editar o arquivo `main.js`, mantendo assim o princípio Open/Closed. 
 
-... continua ...
+Para cada funcionalidade específica que o servidor executa, temos um arquivo diferente sendo carregado. Por exemplo, funcionalidades relativas ao `cors` estão em `src/libs/cors.js`. 
+
+As rotas do servidor REST estão em `src/api`.
+
+## Instalação
+
+```
+$ git clone https://github.com/danielschmitz/express-solid.git
+$ cd express-solid
+$ npm install
+$ npm run dev
+
+```
+
+Acesse no seu navegador `http://localhost:3000/api/foo`
